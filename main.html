@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Welcome to Canonphotochromic.tk</title>
+	<script type="text/Javascript">
+		a = new Array();
+		a[0]="1.jpg";
+		a[1]="4.jpg";
+		a[2]="2.jpg";
+		a[3]="3.jpg";		
+		i=0;
+		j=a.length-1
+		
+	function change()
+	{
+		document.getElementById("image").src=a[i];
+		if(i<j)
+			i++;
+		else
+			i=0;
+
+		window.setTimeout("change()",2000);
+
+	}
+	</script>
+
+	<style script="text/CSS">
+	a:link{
+		background-color : red;
+	}
+	a:hover{
+		background-color : red;
+	}
+	body{
+	background-size: 1650px 750px;
+	background-image:url('bg2.jpg');
+    opacity: 1;
+	}
+	h2,p{
+		color:#EAE5E5;
+		font-size: 200%;
+		padding-right:2em;
+		background-color:#857645;
+	}
+	li{
+		padding-right:3em;
+		color:#EAE5E5;
+		font-size: 200%;
+	}
+	h3{
+		color:#EAE5E5;
+		font-size: 200%;
+		background-color:#615F5F;
+		position: relative;
+		left: 900px;
+		top: 0px;
+		
+	}
+	img{
+		opacity : 1000;
+		filter: alpha(opacity=40); /* For IE8 and earlier */
+		cursor:pointer;
+	}
+	</style>
+</head>
+<body onload="change()">
+<div>
+	<table>
+		<tr>
+			<td><img src="logo.jpg"></td>
+			<td ><a href="signin.html" style="text-decoration: none"><h3>Sign in</h3></a></td>
+			<td ><a href="signup.html" style="text-decoration: none"><h3>Sign up</h3></a></td>
+		</tr>
+	<table>
+	<table bgcolor="#615F5F">
+		<tr>
+			<td><a href="new.html" style="text-decoration: none"><h2>What's New</h2></a></td>
+			<td><a href="home.html" style="text-decoration: none"><h2>Lences</h2></a></td>
+			<td><a href="home.html" style="text-decoration: none"><h2>Branches</h2></a></td>
+			<td><a href="home.html" style="text-decoration: none"><h2>Facilities</h2></a></td>
+			<td><a href="aboutus.html" style="text-decoration: none"><h2>About us</h2></a></td>
+			<td><a href="contactus.html" style="text-decoration: none"><h2>Contact us</h2></a></td>
+		</tr>
+	</table></div>
+	<div>
+	<table>
+		<tr>
+			<td>
+				<li>What's New</td><br>
+			<td rowspan=7><img src="1.jpg" id=image height=400px width=800px></td>
+		<tr>
+			<td>
+				<li>Lences</td>
+		<tr>
+			<td>
+				<li>Branches</td>
+		<tr>
+			<td>
+				<li>Facilities</td>
+		<tr>
+			<td>
+				<li>About us</td>
+		<tr>
+			<td>
+				<li>Contact us</td>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	</div>
+			
+</body>
+</html>
+

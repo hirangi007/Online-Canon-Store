@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<title>Signup</title>
+	<script type="text/javascript">
+			
+			function validate()
+			{
+				var check=true;
+				if(document.frm.fname.value=="")
+				{
+					alert("please enter your name");
+					check=false;
+				}
+				if(document.frm.pass.value!=document.frm.cpass.value)
+				{
+			
+					alert("password not match");
+					check=false;
+				}
+				if(document.frm.add.value=="")
+				{
+					alert("please enter your address");
+					check=false;
+				}
+				if(document.frm.city.value==-1)
+				{
+					alert("Select City");
+					check=false;
+				}
+				if(document.frm.state.value==-1)
+				{
+					alert("Select state");
+					check=false;
+				}
+				if(document.frm.email.value=="")
+				{
+					alert("please enter your email address");
+					check=false;
+				}
+				if(document.frm.gender[0].checked==false && document.frm.gender[1].checked==false)
+				{
+					alert("please select any one gender");
+					check=false;
+				}
+				
+				if(document.frm.contact.value.length!=10 && isNaN(document.frm.contact.value))
+				{
+					alert("please enter your contact number");
+				}
+				return check;
+			}
+					
+	</script>
+	</head>
+	
+	<body>
+		<form name="frm" action="#" method="post" onSubmit="validate();">
+			
+			
+			<table  cellspacing=20 >
+				<tr>
+					<td rowspan=11><img src="7.jpg" id=image height=640px width=1050px></td>
+					<td><h1>Register Here</h1></td>
+				</tr>
+				<tr>
+					<td align="left" ><input type="text" name="fname"  placeholder="Enter Your Name" style="font-size:25px" ></td>
+				</tr>
+				<tr>
+					
+					<td align="left"><input type="password" name="pass" placeholder="Enter Password" style="font-size:25px"/></td>
+				</tr>
+				<tr>
+					
+					<td align="left"><input type="password" name="cpass" placeholder="Confirm Password" style="font-size:25px"/></td>
+				</tr>
+				<tr>
+					
+					<td align="left"><textarea name="add" rows="4" cols="20" wrap="virtual" style="font-size:25px" placeholder="Address"></textarea></td>
+				</tr>
+				<tr>
+					
+					<td align="left"><select name="city" style="font-size:25px">
+						<option value="-1" selected>Select City</option>
+					       <option value="surat">surat</option>
+					        <option value="navsari">navsari</option>
+					         <option value="bardoli">bardoli</option>
+					        </select>
+					</td>
+				</tr>
+				<tr>
+					
+					<td align="left"><select name="state" style="font-size:25px">
+					        <option value="-1" selected>Select State</option>
+					       <option value="Gujarat">Gujarat</option>
+					        <option value="Maharashtra">Maharashtra</option>
+					         <option value="Rajasthan">Rajasthan</option>
+					        </select>
+					</td>
+				</tr>
+				<tr>
+					
+					<td align="left"><input type="text" name="contact" maxlength=10 placeholder="Contact no" style="font-size:25px"/></td>
+				</tr>
+				<tr>
+					
+					<td align="left"><input type="text" name="email" id="mail" placeholder="E-mail Address" style="font-size:25px"/></td>
+				</tr>
+				<tr>
+					
+					<td style="font-size:25px"><input type="radio" name="gender" value="Male" checked=checked style="font-size:25px"/>Male
+					       <input type="radio" name="gender" value="Female" style="font-size:25px"/>Female
+					</td>
+				</tr>
+				
+				<tr>
+					
+					<td align="right"><input type="submit" name="submit" value="Submit" style="font-size:25px"/></td>
+				</tr>
+						         
+				
+				
+		
+			</table>
+		</form>
+		</body>
+</html>
+
